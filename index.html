@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CSS animatin, transitions and transforms</title>
+                
+    <link rel="stylesheet" href="style.css" type="text/css" media="all">
+
+   
+</head>
+
+<body>
+
+	<div class="card">
+		<div class="img">
+			<img src="naruto.jpg" alt="Uzumaki Naruto">
+			<div class="caption">Uzumaki Naruto</div>
+		</div>
+		<div class="content">
+			<h2>Title</h2>
+			<p>Naruto Uzumaki, aspiring Hokage, embodies perseverance and strength. Once shunned, his unyielding spirit proves his worth and inspires many.</p>
+			<a href="#" id="readMore">Read More</a>
+		</div>
+		<div class="overlay" style="display: none;">
+			<div class="overlay-content">
+				<h3>Naruto Uzumaki</h3>
+				<p>Position: Ninja</p>
+				<p>Rank: Hokage</p>
+				<p>Skill: Ninjutsu, Taijutsu, Sage Mode</p>
+				<p>Achievement: Ended the Fourth Great Ninja War, Uniting the Villages</p>
+				<a href="#" class="contact-button">Contact Me</a>
+				<div class="social-icons">
+					<a href="https://instagram.com"><img src="insta.png" alt="Instagram"></a>
+					<a href="https://github.com"><img src="github.png" alt="GitHub"></a>
+					<a href="https://linkedin.com"><img src="linkdin.png" alt="LinkedIn"></a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+document.getElementById('readMore').addEventListener('click', function(event) {
+    event.preventDefault();
+    var overlay = document.querySelector('.overlay');
+    overlay.style.display = 'flex';
+});
+
+document.querySelector('.overlay').addEventListener('mouseleave', function() {
+    this.style.display = 'none'; 
+});
+
+</script>
+			
+</body>
+
+</html>
